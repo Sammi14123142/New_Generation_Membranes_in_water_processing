@@ -1,0 +1,494 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage{gensymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{multirow}
+\usepackage[version=3]{mhchem}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\parskip=0.1in
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LINE SPACING
+\newcommand{\linespacing}{1.5}
+\renewcommand{\baselinestretch}{\linespacing}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BIBLIOGRAPHY STYLE
+\usepackage[square, number]{natbib}
+%\bibliographystyle{plain}
+\bibliographystyle{apalike}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% OTHER FORMATTING/LAYOUT DECLARATIONS
+% Graphics
+\usepackage{graphicx,color}
+\usepackage{epstopdf}
+\usepackage[british]{babel}
+% The left-hand-side should be 40mm.  The top and bottom margins should be
+% 25mm deep.  The right hand margin should be 20mm.
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=4cm,right=2cm,headsep=10pt]{geometry}
+\flushbottom
+% Pages should be numbered consecutively thorugh the main text.  Page numbers
+% should be located centrally at the top of the page.
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{
+	\fancyhf{}
+	% Add "DRAFT: <today's date>" to header (comment out the following to remove)
+	\lhead{\textit{Draft: \today}}
+	%
+	\chead{\thepage}
+	\renewcommand{\headrulewidth}{0pt}
+}
+\pagestyle{plain}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HYPERREF
+\usepackage[colorlinks,pagebackref,pdfusetitle,urlcolor=blue,citecolor=blue,linkcolor=blue,bookmarksnumbered,plainpages=false]{hyperref}
+% For print version, use this instead:
+%\usepackage[pdfusetitle,bookmarksnumbered,plainpages=false]{hyperref}
+%\usepackage{backref}
+%\renewcommand{\backrefpagesname}{Cited on}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BEGIN DOCUMENT
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PREAMBLE: roman page numbering i, ii, iii, ...
+\pagenumbering{roman}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TITLE PAGE: The title page should give the following information:
+%%	(i) the full title of the thesis and the sub-title if any;
+%%	(ii) the full name of the author;
+%%	(iii) the qualification aimed for;
+%%	(iv) the name of the University of Sussex;
+%%	(v) the month and year of submission.
+\thispagestyle{empty}
+\begin{flushright}
+\includegraphics[width=18cm]{abct}
+\end{flushright}	
+\vskip40mm
+\begin{center}
+% TITLE
+\huge\textbf{New Generation of Membranes in Water Processing}
+\vskip2mm
+% SUBTITLE (optional)
+\LARGE\textit{ }
+\vskip5mm
+% AUTHOR
+\Large\textbf{Xinyi ZENG}
+\normalsize
+\end{center}
+\vfill
+\begin{flushleft}
+\large
+% QUALIFICATION
+Submitted for the degree of Bachelor of Science \\
+The Hong Kong Polytechnic University	\\
+% DATE OF SUBMISSION
+April 2016
+\end{flushleft}		
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TABLE OF CONTENTS, LISTS OF TABLES & FIGURES
+\newpage
+\pdfbookmark[0]{Contents}{contents_bookmark}
+\tableofcontents
+\listoftables
+\phantomsection
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoffigures
+\phantomsection
+\addcontentsline{toc}{chapter}{List of Figures}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MAIN THESIS TEXT: arabic page numbering 1, 2, 3, ...
+\newpage
+\pagenumbering{arabic}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Oral pre}
+%Advances in membrane technologies for water treatment : materials, processes and application
+ \citep{kor04}
+ \citep{47hua}
+ \citep{48lia}
+\citep{46zhao}
+ \citep{101kaz}
+%  A recent progress in thin film composite membrane: A review
+ \citep{32afang}
+\citep{15fane}
+ \citep{71nair}
+
+
+
+%@book{15ang,
+%	Author = {Angelo Basile, Alfredo Cassano, and Navin K. Rastogi},
+%	Date-Added = {2016-02-18 06:48:44 +0000},
+%	Date-Modified = {2016-02-18 06:49:59 +0000},
+%	Publisher = {Woodhead Publishing},
+%	Series = {Woodhead Publishing in energy},
+%	Title = {Advances in membrane technologies for water treatment : materials, processes and applications},
+%	Year = {2015}}
+
+%\citep{15ang}
+
+\chapter{Introduction}
+
+Driven by water scarcity and energy demand, membrane science has transformed from laboratory research to commercial realities such as treating industrial effluents, water reclamation and reuse, potable water production, desalination of seawater and brackish water since 1960 and is experiencing extensive growth to date, for which polymer chemistry is the work horse \citep{sin15}. Started from the first significant utilisation in the testing of drinking water at the end of World War II, membranes and membrane systems were enjoying an overall market over \$10 billion in 2010.
+
+Membranes are typically semipermeable barriers which possess permselective properties and performs versatile functions between feed and product while subject to a driving force in separation processes (Figure \ref{sep}). Depending on the physical size of substances to be separated and the driving force, membrane processes can be categorised into four groups:
+\begin{enumerate}
+\item pressure difference (microfiltration (MF), ultrafiltration (UF), nanofiltration (NF), reverse osmosis (RO));
+\item concentration difference (forward osmosis (FO));
+\item temperature difference (pervaporation (PV)); and 
+\item electric potential defference (electrodeionisation (EDI) and electrodialysis (ED)) 
+\end{enumerate}
+in the water domain including wastewater treatment, seawater desalination and water purification.
+
+\begin{figure}[h!]
+\centering
+  \includegraphics[width=\linewidth]{sep}
+  \caption{Membrane separation processes}
+  \label{sep}
+\end{figure}
+
+Virtually the majority of membrane processes are pressure driven including RO, NF, UF and MF as depicted in Figure \ref{soluteSize} has been leading the desalinationation technology and is expected to maintain its leadership in the subsequent years \citep{lee11}. The globally increasing commercial interest in RO technology returns back impressive cost reduction. 
+
+\begin{figure}[h!]
+\centering
+  \includegraphics[width=0.95\linewidth]{soluteSize}
+  \caption{Membrane process designation by solute size}
+  \label{soluteSize}
+\end{figure}
+
+Osmosis, or referred to as forward osmosis (FO) currently, is a physical phenomenon driven by the osmotic pressure difference across a selectively permeable membrane to transport water. As a typical concentration-driven process, FO enjoys unparalleled advantages of less hydraulic pressure operation, thorough rejection of wider range of contaminants and lower fouling tendency over pressure-driven processes \citep{cath06} whereas impeded by the lack of FO membranes enabling high flux \citep{wang10}.
+
+A logical ﬂow of the main body is outlined below to make this review easier to follow:
+\begin{enumerate}
+\item Advanced membrane materials with promising set up and methods for fabrication and modification are identified together with their engineering challenges to be tackled in practical implementation in Section 2 Membrane materials;
+\item Section 3 Prospects provides an extensive analysis concerning the development upperbound of new generation membranes as well as future research direction.
+\end{enumerate}
+
+\chapter{Membrane Materials}
+\section{Polymeric Membranes}
+
+\subsection{Responsive Membranes}
+Membranes that can sense environmental changes and induce structural modification automatically have tuneable characteristics like flux and solute selectivity. Such intelligent systems are called responsive membranes. pH-sensitive \citep{481oak, 482gud}, ionic-strength-responsive\citep{49zha, 492sin} and thermally-induced \citep{50yin} membranes alter their conformation of polymer chains, leading to variation in pore structure and thus in water permeation rate. Another type of membrane is photochemically perceptional which undergoes conformational transition or polarity change on the surface \citep{53kim}. 
+
+To date, stimuli vary from biomolecules \citep{561bio} to electric \citep{562ele} or magnetic field \citep{563mag}, driving considerable efforts into novel polymeric membranes that react to multiple stimuli for versitile applications \citep{57shi}. The biomimetic sensing approach shows great potential in various separation processes. An inspiring membrane synthesised by regular self-assembly of polyethylene glycol bearing azobenzene endcaps (Azo-PEGs) is characterised by the utilising of photo-driven pulsation technique which allows repeatedly pumping large amount of water in and out in response to visible or UV irradiation as well as its robust and well-defined structure \citep{58hu}. As shown in Figure \ref{pegsyn}, synthesis of the end-capped PEG polymers consists of two esterification steps. Figure \ref{pegmech} depicts the unique pulsation behaviour triggered by visible and UV light which lead to significant change of vesicle diameter. Another promising approach is piezoelectric membranes of which the out of plane vibration leads to increased flux and anti-fouling \citep{59dare}. Other factors including crossflow velocity, frequency of signals and pressure also contribute to membrane performance. Based on the four design principles (Figure \ref{respon}) \citep{15fane} of four distinctive membranes: \begin{enumerate}
+\item porous membranes with low grafting density on the pore wall; 
+\item porous membranes with high grafting density on the porous surface; 
+\item bulk nonporous membrane; and 
+\item nonporous IPN membrane with linear receptive polymers, 
+\end{enumerate}
+numerous feasible routes for fabricating responsive membranes can be developed with tunnable \enquote{passage} and \enquote{rejection}.
+
+\begin{figure}[h!]
+\centering
+  \includegraphics[width=0.9\linewidth]{pegsyn}
+  \caption{Synthesis of endcapped Azo-PEGs containing selected substituents}
+  \label{pegsyn}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+  \includegraphics[width=0.8\linewidth]{pegmech}
+  \caption{Illustration of photo-driven pulsation behavior}
+  \label{pegmech}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+  \includegraphics[width=0.9\linewidth]{respon}
+  \caption{Effects of conformational change in polymer chains}
+  \label{respon}
+\end{figure}
+ 
+
+
+\subsection{Biomimetic Membranes}
+Borrowing concepts from polymer chemistry to mimic biomembranes, biomimetic membranes outperform regular synthetic ones in pore structures and surface properties while remain the optimal selectivity and permeability of biological ones by virtue of their intricate structures and various implementation mechanisms, that is, biological paradigms which can be categorised into five groups:
+\begin{enumerate}
+\item surface layer (S-layer) proteins; 
+\item lipid bilayer;
+\item carrier mediated transport in biological membranes; 
+\item membrane protein mediated separations; and
+\item biological antifouling strategies (Table \ref{bio}) \citep{14she}. 
+\end{enumerate}
+Group 4 and 5 inspires the design of channel mediated biomimetic membranes and bioinspired antifouling separation membranes which show enhanced performance in water processing.
+
+\begin{table}[h!]  
+\includegraphics[width=\linewidth]{bio_para}
+  \caption{Biological paradigms}
+  \label{bio}
+\end{table}
+
+The fact that biological cells transport water in an exceptionally efficient manner at the presence of aquaporin \citep{13mar} motivates researches on protein-based polymer membranes incorporated with biological\citep{42kum} or artificial channel proteins\citep{43fyl}. Considerable works has been devoted into making the aquaporin Z biomimetic membranes that passing water under either an osmotic or a mechanical pressure to be mechanically robust in addition to maintain their exceeding permeability and selectivity \citep{45akauf, 45bli, 45chong, 45dli, 45eli}. A TFC aquaporin-based membrane (ABM) synthesised using a microporous polysulfone substrate soaked in an m-phenylene-diamine bath containing AquaporinZ-based proteoliposomes and then exposed to trimesoyl chloride to obtain a proteoliposomes embedded three dimensional crosslinked polyamide layer via IP technique which is easily scaled up shows a great commercial potential for desalination application (Figure \ref{abm}) \citep{46zhao}.
+
+\begin{figure}[h!]
+\centering
+  \includegraphics[width=0.9\linewidth]{abm}
+  \caption{ABM: a. Synthesis schema; b. Conceptual model; c. Photo }
+  \label{abm}
+\end{figure}
+
+Biomimetic antifouling membranes specifically utilise two strategies seen in living systems: 
+\begin{enumerate}
+\item surface physiochemical interactions: formation of molecules such as phospholipid moieties on membrane surface reduces its affinity with foulants \citep{47hua}; and
+\item nano and microscale topography: fabrication of surface topography to achieve robust hydrophobicity or hydrophilicity \citep{48lia}.
+\end{enumerate}
+
+
+\section{Inorganic Membranes}
+
+Inorganic membranes can be generally categorised into four groups: 
+\begin{enumerate}
+\item ceramics membranes;
+\item sintered metals membranes;
+\item glass; and
+\item zeolite membranes, which are good prospects for PV or GS processes led by significantly narrow pore sizes.
+\end{enumerate}
+
+Characterised by strong resistance to corrosive environments, high mechanical strength and thermal stability, two classes of inorganic membranes were commercialised from the 1980s onward \citep{96mik}: 
+\begin{enumerate}
+\item dense membranes; and 
+\item porous membranes.
+\end{enumerate} 
+
+A dense membrane consists of one solid layer of metals with a considerable thickness of conducting oxides mixed in. They are mainly utilised in oxygen and hydrogen separation processes. Porous membranes are fabricated from numerous materials including $Al_2O_3, SiO_2, TiO_2, ZrO_2$ or combinations thereof into three-layer structures: one macroporous support layer, one intermediate layer for a smooth interface and a top separation layer \citep{mik13}. Since oxides of titania, alumina and zirconia can promote ozone decomposition and formation of radicals like $\cdot$OH \citep{ozo1, gra22} and thus facilitate the removal of organic foulants which is considered to be highly responsible for the fouling of membranes \citep{04yav} rather than being prone to destruction as polymeric membranes \citep{000has}, a high permeate flux can be achieved in combination with intermittent ozonation \citep{05kar} which additionally prevent fouling caused by particle accumulation on the membrane surface \citep{01kim, ver01}.  IUPAC further categorises porous membranes into three groups according to pore sizes: 
+\begin{enumerate}
+\item microporous membranes with pore sizes within 2 nm; 
+\item mesoporous membranes with pore sizes in the range of 2 to 50 nm; and 
+\item macroporous membranes with pore sizes larger than 50 nm. 
+\end{enumerate}
+
+The potential of supported zeolite layers in separation membranes especially for removing ions from aqueous solution in RO processes have been proved by molecular dynamic simulation, giving rise to worldwide interests in zeolite membranes \citep{101kaz}. With a significantly smaller aperture size than the kinetic sizes of hydrated ions (shown in Table \ref{ion}), composite zeolite hydroxysodalite (HS) membrane is capable to simultaneous hinder ions and dispersed organic molecules without material instability and fouling concerns while allowing molecules smaller than 0.3nm in diameter to diffuse through the nanopores of zeolite HS (Figure \ref{hs}).
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{lc} \hline
+Ion         & Hydrated diameter (nm) \\ \hline
+\ce{H2O}  & 0.26                   \\
+\ce{Li+}  & 0.76                   \\
+\ce{Na+}  & 0.72                   \\
+\ce{K+}   & 0.66                   \\
+\ce{Mg++} & 0.86                   \\
+\ce{Ca++} & 0.82                   \\
+\ce{OH-}  & 0.60                   \\
+\ce{Cl-}  & 0.66                   \\
+\ce{NO3-} & 0.68      \\       \hline     
+\end{tabular}
+\caption{Hydrated ions size}
+\label{ion}
+\end{table}
+
+\begin{figure}[h!]
+\centering
+  \includegraphics[width=0.6\linewidth]{hs}
+  \caption{Repeating unit of zeolite HS}
+  \label{hs}
+\end{figure}
+
+
+\section{Hybrid Membranes}
+
+\subsection{Mixed Matrix Membranes}
+
+The extensive exploration on the tradeoff relation between water permeability and selectivity in polymeric membranes hitherto has yielded an upper bound correlation  \citep{68gei, 681rob} which is potentially overcome by inorganic membranes at the expense of costly large-scale, defect-free production. Mixed matrix membranes (MMMs) that adopt superior characteristics of both by dispersing inorganic materials (fillers) in a polymeric matrix in four optional manners (Figure \ref{mmm}): 
+\begin{enumerate}
+\item inorganic layer grown under low-temperature on porous polymer substrate; 
+\item polymer layer on porous inorganic substrate; 
+\item inorganic fillers including nanoscale ones in the upper rejection layer; and
+\item fillers in both rejection layer and substrate 
+\end{enumerate}
+are emerging as attractive candidates for separating a broad range of molecules \citep{72kim}. 
+
+\begin{figure}[h!]
+\centering
+  \includegraphics[width=0.9\linewidth]{mmm}
+  \caption{Dispersion of inorganic materials in a polymeric matrix in four optional manners}
+  \label{mmm}
+\end{figure}
+
+Porous fillers can be divided into two groups: a. one-dimension fillers such as inorganic nanotubes \citep{70zang} and carbon nanotubes (CNTs) \citep{67achan, 69cong} have been utilised to construct membranes highly efficient in water desalination or gas separation; b. two-dimension fillers include zeolites \citep{30apen} and graphene \citep{71nair}. The graphene-based membrane is a current thrust that allows unimpeded permeation of \ce{H2O} while diffusion of other liquids, vapours or gases is clogged by reversible narrowing of the capillaries under low humidity or competition with water. Even against helium, water molecules permeate at a speed 1010 times faster.
+
+These heterogeneous membranes made from ceramics and polymers are additionally being developed for handling non-aqueous feed streams \citep{kor04}
+
+\subsection{Thin-Film Composites and Nanocomposites}
+
+A composite membrane is synthesised by forming a thin dense layer onto a porous support that provides proper mechanical strength with low resistance to permeate flow. Firstly introduced in \cite{65mor}, the in-situ interfacial polycondensation or polymerisation (IP) technique has not only been widely applied in manufacturing thin-film composite (TFC) membrane for NF or RO process in the industry but also partaken in synthesising hollow fiber membranes for pressure retarded osmosis (PRO) \citep{13cho} and FO \citep{10wan} with enhanced performance. IP synthesis refers to the instantaneously polymerisation near the interface between two immiscible phases (an organic solvent and water) with a pair of monomers dissolved in initially. The consequential oligomers shield two phases from further contact, leading to the growing resistance so that an ultra-thin dense film forms and precipitates rapidly. 
+
+Each layer of TFC membranes can be optimised for desired performance by altering parameters in polycondensation process. Based on preparations using a blending of amines and acyl chlorides, \citep{24kim} found out that reaction time and the position of functional group in monomers has significant impact on membrane behaviour. \citep{25nam} improved flux rejection and chemical stability by introducing ionic bonds. As a result of low solubility of acid chlorides in water, polymerisation predominantly occurs in organic phase which makes it reasonable that water flux and salt passage vary with solvent types \citep{26gho}. Additives such as acid acceptors \citep{28yan}, surfactants \citep{27man}, phase-transfer catalysts \citep{29kwa} show critical influence on rejection, permeability and water flux respectively.
+
+Besides explorations of IP techniques for reformed membranes in NF or RO processes mentioned above, novel forward osmosis TFC membranes breaking the major barrier that hinder the application of FO brought a resurgence of interest in FO research by offering optimised membranes with low salt leakage, high water flux and andi-internal concentration polarisation (ICP) together with anti-scaling ability \citep{31achou}. \citep{32afang} put forward double-skinned hollow fibers that effectively mitigate membrane scaling and minimize ICP effect using poly(amide-imide) (PAI) in a phase inversion step to form ultrafiltration hollow fiber substrate followed by interfacial polymerisation and chemical modification for a polyamide RO-like skin inside and a positively charged NF-like skin outside correspondingly (Figure \ref{2skin}). Other innovations in FO TFC membranes certer on tailoring the porous substrate which closely aligns with the feasibility of FO processes \citep{33shi} by altering monomer concentrations \citep{32bwei} or incorporating a porous zeolite layer within an appropriate thickness \citep{34ama, 34bma}
+
+\begin{figure}[h!]
+\centering
+  \includegraphics[width=\linewidth]{2skin}
+  \caption{Cross-section morphology of a double-skinned hollow fiber}
+  \label{2skin}
+\end{figure}
+
+
+
+\subsection{Isoporous Membranes}
+Isoporous nano/micro-engineered membranes are versatile structures with pores of the same size and shape parallel with each other whereas key features such as morphology, biocompatibility, membrane area, pore size and thickness remain tuneable for a host of applications \citep{13war}. Aforementioned characteristics not only facilitate cleaning for reuse, promise a lower flow resistance and thus throughput raise, but also lead to sharper molecular weight cut-offs and anti-fouling ability. The incorporation of isoporous membranes has brought significant advancement in separation efficacy for water purification \citep{11war, 11pau}. 
+
+Four types of techniques have been utilised to fabricate well-structured isoporous membranes in nanometer and micrometer dimensions:
+\begin{enumerate}
+\item microelectromechanical systems (MEMS); 
+\item anodisation;
+\item solid-state nanopore; and
+\item block copolymers. 
+\end{enumerate}
+A concise comparison has been concluded in Table \ref{isoporous} \citep{13war}. It is worth noticing that recent developments in MEMS technology have provided unprecedented control over detailed microstructure in scalable manufacturing process \citep{62ari}.
+
+\begin{table}[h!]  
+\includegraphics[width=\linewidth]{isofab}
+  \caption{Comparison of fabrication techniques for iso-porous membranes}
+  \label{isoporous}
+\end{table}
+
+\subsection{Surface-Modified Membranes}
+
+Surface modification of preformed membranes is playing a key role in performance enhancement or even the construction of novel separation functions by either reducing undesired biofouling whose earlier step, nonspecific (protein) adsorption, occurs on membrane surface \citep{75cnad} or altering the pore characteristics to fulfil target requirements \citep{74set}. The art of surface modification is promising while challenging wherein numerous factors such as reproducibility, uniformity, stability, cost and process control together with accurate control of functional groups to be taken into consideration during the entire process of surface modification \citep{07gop}. To date, these engineering methods can be classified into following groups: 
+\begin{enumerate}
+\item blending;
+\item chemical; 
+\item coating; 
+\item composite; 
+\item grafting; and 
+\item combination.
+\end{enumerate}
+
+Coating methods that coat a thin layer that physically adheres to the substrate can be categorised into five groups: 
+\begin{enumerate}
+\item physical adsorption; 
+\item Langmuir-Blodgett or analogues; 
+\item plasma deposition; 
+\item spinning; and 
+\item curring. 
+\end{enumerate}
+
+Below are cases of coated membranes to illustrate the versatility of this technique. The mechanical resistance of polyvinylidene fluoride (PVDF) is dramatically enhanced with a tetra-fluoroethylene (TFE)-2,2,4-trifluoro-5-tri-fluorometoxy-1,3-dioxole (TIT) (HYFLON AD 60X) coating layer (Figure \ref{pvdf}) together with narrower pore distribution, higher porosity and lower resistance to mass transfer \citep{90gug}. The microporous polyproppylene (PP) hollow fiber membrane modified by coating a rough layer of granulated PP achieves superhydrophobicity with contact angle enlarged to 158$^o$ from 122$^o$ \citep{91lv}. However, the instability of coated layers that provide numerous highly advantageous properties can prove to be a major hurdle.
+
+\begin{figure}[h!]
+\centering
+  \includegraphics[width=0.6\linewidth]{pvdf}
+  \caption{Chemical structure of PVDF AND HYFLON AD 60X (a=0.6, b=0.4)}
+  \label{pvdf}
+\end{figure}
+
+Grafting is a two-step process involving covalently bonding monomers onto a membrane after initiating the membrane by one of the following techniques according to the chemical structure of membrane surface together with the target properties after modification: 
+\begin{enumerate}
+\item chemical \citep{05red}; 
+\item enzymatic \citep{06tsu}; 
+\item plasma \citep{77tur}; and 
+\item high-energy radiation or photochemical \citep{08dai, 10abu, 08mina}.
+\end{enumerate}
+
+Various attempts have been made to adjust the grafted layer as a function of resultant membrane characteristics. A negatively charged UF hollow fibre that shows ideal performances including a high flux, high dye rejection and low salt retention in the treatment of dye effluents was obtained by UV-photografting of vinyl monomers on polyethersulfone (PES) hollow fiber membranes \citep{79akb}. The steric hindrance, negative surface charge and so as hydrophilicity of a raw NF membrane increased with the graft polymerisation of methacrylic acid (MA) monomers and thus enhanced its rejection capacity for organic micro-pollutants in drinking water \citep{80kim}.
+
+Combined techniques were recently applied for membrane modification and presented for polyetherimide (PEI) membranes here to demonstrate the importance of fabrication techniques on facilitating the commercialisation of membrane technology \citep{94azhang, 94bzhang}. It is worth noticing that membrane pore size is positively correlated to mass transfer efficiency but vice versa in the case of chemical resistance to wetting. A breakthrough was reported where a triple-orifice spinneret is employed during the hollow fiber spinning process followed by incorporation of fluorinated silica (f\ce{SiO2}) nanoparticles (NPs) to enlarge the pore size and raise the surface porosity of PEI hollow fiber membranes so that aforementioned properties can be achieved at the mean time. The mechanism and reaction route are depicted in Figure \ref{94mech} and Figure \ref{94route}. The physical and chemical changes of polyvinylidene fluoride-co-hexafluoropropylene (PVDF-HFP) membrane by first initiation using 10 wt.\% NaOH solution and subsequently modification with mixed solution of FS10 (Figure \ref{fs10}) and tetraethoxysilane (TEOS) result in a more hydrophobic membrane with an asymmetric microporous outer surface and a contact angle expanded to 127.8$^o$ from 955.5$^o$ \citep{83wong}. The results as such are promising while the complexity of combined modification sequences is always a point of concern.
+
+\begin{figure}[h!]
+\centering
+  \includegraphics[width=0.9\linewidth]{94mech}
+  \caption{Mechanism of forming the PEI-f\ce{SiO2} organic-inorganic composite membranes}
+  \label{94mech}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+  \includegraphics[width=0.9\linewidth]{94route}
+  \caption{Reaction route of forming the PEI-f\ce{SiO2} organic-inorganic composite membranes}
+  \label{94route}
+\end{figure}
+
+
+\begin{figure}[h!]
+\centering
+  \includegraphics[width=0.9\linewidth]{fs10}
+  \caption{Chemical structure of FS10}
+  \label{fs10}
+\end{figure}
+
+Table \ref{mod} is an interpretation of overall results \citep{75cnad}.
+
+\begin{table}[h!]  
+  \includegraphics[width=\linewidth]{mod}
+  \caption{Advantages and disadvantages of modification methods}
+  \label{mod}
+\end{table}
+
+
+
+
+
+
+\chapter{Prospects}
+
+There are four advancements widely considered to be responsible for transferring membrane technology from the laboratory to proven industrial applications:
+\begin{enumerate}
+
+\item
+development of high-efficiency membrane modules with extended surface areas;
+
+\item
+generation of novel materials with controllable capabilities to separate molecularly analogous components like gases, salts, colloids, proteins to name a few.
+
+\item
+adjusting membrane morphology for regulating microscopic transport phenomena
+
+\item
+manufacturing membrane materials in an economical-friendly and reliable manner \citep{kor04}.
+
+\end{enumerate}
+
+Development of novel membrane modules and operating procedures to date have been stimulating the growth of membrane industry like submerged membrane filtration for the treatment of municipal water. To minimise energy consumption and and reduce environmental impact, membrane separation processes are increasingly integrated with conventional technologies as hybrid membrane systems like MF/UF-RO membrane systems where traditional filtration is substituted by MF or UF for treating RO feed water.
+
+Surface-modified membranes are becoming more and more robust against target implementation environment. The future of surface modification is promising while challenging wherein numerous factors such as reproducibility, uniformity, stability, cost and process control together with accurate control of functional groups to be taken into consideration. The well-structured isoporous membrnaes with tunable key features such as morphology, biocompatibility, membrane area, pore size and thickness show significant advantages in reuse, low flow resistance, high throughput, sharper molecular weight cut-offs and anti-fouling ability. The four types of fabrication techniques lead to wide spread of proporties which have been compared in Table \ref{isoporous} explicitly. For responsive membranes, considerable efforts are driven into novel polymeric membrnaes that react to multiple stimuli from biomolecules to electric or magnetic field for versitile applications. Borrowing concepts from polymer chemistry to biological paradigms like membrane protein mediated separations and biological antifouling strategies, the channel mediated biomimetic membranes and bioinspired antifouling separation membranes are designed which outperform regular synthetic ones in pore structures and surface properties while remain the optimal selectivity and permeability of biological ones. 
+
+Inorganic membranes are characterised by strong resistance to corrosive environments, high mechanical strength and thermal stability, among which zeolite membrnaes are gaining worldwide interests for its potential in removing ions from aqueous solution in RO process. 
+
+For thin-film composites and nanocomposites, research efforts center on altering parameters in polycondensation process where desired performance in NF, RO or more recently in FO processes comes from. Mixed matrix membranes that adopt superior characteristics of polymeric and inorganic membranes by dispersing inorganic materials in a polymeric matrix are emerging as attractive candidates for separating a broad range of molecules.
+
+\chapter{Conclusion}
+
+More than energy and fuel shortage, water is the pressing issue we have to face in the coming future. In this scenario, membrane technology has assumed a decisive position for municipal or industrial sewage treatment, seawater desalination and water purification. In this literature review, advanced materials and membranes with promising set up are identified together with their engineering challenges to be tackled in practical implementations, followed by development upperbound as well as future research efforts. Advancement in new generation of membranes will assure the prosperity of this technology. 
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BIBLIOGRAPHY
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{mem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END DOCUMENT
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
